@@ -20,7 +20,7 @@ def question(_id):
 
 @app.route('/question/random')
 def question_random():
-    return jsonify(random.choice(questions))
+    return json.dumps(random.choice(questions))
 
 @app.route('/question/answer/<int:_id>')
 def answer(_id):
